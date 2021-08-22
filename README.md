@@ -1,119 +1,136 @@
-# Boilerplate Card by [@iantrich](https://www.github.com/iantrich)
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-A community driven boilerplate of best practices for Home Assistant Lovelace custom cards
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h3 align="center">Homeassistant Airparif Card</h3>
 
-[![GitHub Release][releases-shield]][releases]
-[![License][license-shield]](LICENSE.md)
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
+  <p align="center">
+    Air pollution card based on the <a href="https://github.com/rettelx/ha-airparif">Airparif</a> integration
+    <br />
+    <br />
+    <a href="https://github.com/rettelx/ha-airparif-card/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/rettelx/ha-airparif-card/issues">Request Feature</a>
+  </p>
+</p>
 
-![Project Maintenance][maintenance-shield]
-[![GitHub Activity][commits-shield]][commits]
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About the Project</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li>
+<a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#example">Example</a></li>
+      </ul>
+</li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-[![Discord][discord-shield]][discord]
-[![Community Forum][forum-shield]][forum]
+<!-- ABOUT THE PROJECT -->
 
-## Support
+## About the Project
 
-Hey dude! Help me out for a couple of :beers: or a :coffee:!
+This project provides a card that displays data from the [rettelx/ha-airparif](https://github.com/rettelx/ha-airparif)
+project.
 
-[![coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/zJtVxUAgH)
+![Card example](https://github.com/rettelx/ha-airparif-card/blob/main/images/image.jpg?raw=true)
 
-## Options
+<!-- GETTING STARTED -->
 
-| Name              | Type    | Requirement  | Description                                 | Default             |
-| ----------------- | ------- | ------------ | ------------------------------------------- | ------------------- |
-| type              | string  | **Required** | `custom:boilerplate-card`                   |
-| name              | string  | **Optional** | Card name                                   | `Boilerplate`       |
-| show_error        | boolean | **Optional** | Show what an error looks like for the card  | `false`             |
-| show_warning      | boolean | **Optional** | Show what a warning looks like for the card | `false`             |
-| entity            | string  | **Optional** | Home Assistant entity ID.                   | `none`              |
-| tap_action        | object  | **Optional** | Action to take on tap                       | `action: more-info` |
-| hold_action       | object  | **Optional** | Action to take on hold                      | `none`              |
-| double_tap_action | object  | **Optional** | Action to take on double tap                | `none`              |
+## Getting Started
 
-## Action Options
+To get up and running follow these simple steps.
 
-| Name            | Type   | Requirement  | Description                                                                                                                            | Default     |
-| --------------- | ------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| action          | string | **Required** | Action to perform (more-info, toggle, call-service, navigate url, none)                                                                | `more-info` |
-| navigation_path | string | **Optional** | Path to navigate to (e.g. /lovelace/0/) when action defined as navigate                                                                | `none`      |
-| url             | string | **Optional** | URL to open on click when action is url. The URL will open in a new tab                                                                | `none`      |
-| service         | string | **Optional** | Service to call (e.g. media_player.media_play_pause) when action defined as call-service                                               | `none`      |
-| service_data    | object | **Optional** | Service data to include (e.g. entity_id: media_player.bedroom) when action defined as call-service                                     | `none`      |
-| haptic          | string | **Optional** | Haptic feedback for the [Beta IOS App](http://home-assistant.io/ios/beta) _success, warning, failure, light, medium, heavy, selection_ | `none`      |
-| repeat          | number | **Optional** | How often to repeat the `hold_action` in milliseconds.                                                                                 | `non`       |
+### Prerequisites
 
-## Starting a new card from boilerplate-card
+This card is intended to work with entities from [this integration](https://github.com/rettelx/ha-airparif).
 
-### Step 1
+### Installation
 
-Clone this repository
+1. Copy the `airparif-card.js` file into your `www` folder.
 
-### Step 2
+2. Add the "Airparif" card directly from the Homeassistant dashboard.
 
-Install necessary modules (verified to work in node 8.x)
-`yarn install` or `npm install`
+## Usage
 
-### Step 3
+### Configuration
 
-Do a test lint & build on the project. You can see available scripts in the package.json
-`npm run build`
+| Name   | Type   | Requirement  | Description                                       | Default |
+| ------ | ------ | ------------ | ------------------------------------------------- | ------- |
+| type   | string | **Required** | `custom:airparif-card`                            |         |
+| entity | string | **Required** | Home Assistant entity ID for the Airparif sensor. | `none`  |
 
-### Step 4
-
-Search the repository for all instances of "TODO" and handle the changes/suggestions
-
-### Step 5
-
-Customize to suit your needs and contribute it back to the community
-
-## Starting a new card from boilerplate-card with [devcontainer][devcontainer]
-
-Note: this is available only in vscode ensure you have the [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed.
-
-1. Fork and clone the repository.
-2. Open a [devcontainer][devcontainer] terminal and run `npm start` when it's ready.
-3. The compiled `.js` file will be accessible on
-   `http://127.0.0.1:5000/boilerplate-card.js`.
-4. On a running Home Assistant installation add this to your Lovelace
-   `resources:`
+### Example
 
 ```yaml
-- url: 'http://127.0.0.1:5000/boilerplate-card.js'
-  type: module
+type: custom:airparif-card
+entity: sensor.airparif_75101
 ```
 
-_Change "127.0.0.1" to the IP of your development machine._
+<!-- ROADMAP -->
 
-### Bonus
+## Roadmap
 
-If you need a fresh test instance you can install a fresh Home Assistant instance inside the devcontainer as well.
+See the [open issues](https://github.com/rettelx/ha-airparif/issues) for a list of proposed features (and known issues).
 
-1. Run the command `container start`.
-2. Home Assistant will install and will eventually be running on port `9123`
+<!-- CONTRIBUTING -->
 
-## [Troubleshooting](https://github.com/thomasloven/hass-config/wiki/Lovelace-Plugins)
+## Contributing
 
-NB This will not work with node 9.x if you see the following errors try installing node 8.10.0
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any
+contributions you make are **greatly appreciated**.
 
-```yarn install
-yarn install v1.3.2
-[1/4] 🔍  Resolving packages...
-warning rollup-plugin-commonjs@10.1.0: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-commonjs.
-[2/4] 🚚  Fetching packages...
-error @typescript-eslint/eslint-plugin@2.6.0: The engine "node" is incompatible with this module. Expected version "^8.10.0 || ^10.13.0 || >=11.10.1".
-error Found incompatible module
-info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
-```
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-[commits-shield]: https://img.shields.io/github/commit-activity/y/custom-cards/boilerplate-card.svg?style=for-the-badge
-[commits]: https://github.com/custom-cards/boilerplate-card/commits/master
-[devcontainer]: https://code.visualstudio.com/docs/remote/containers
-[discord]: https://discord.gg/5e9yvq
-[discord-shield]: https://img.shields.io/discord/330944238910963714.svg?style=for-the-badge
-[forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
-[forum]: https://community.home-assistant.io/c/projects/frontend
-[license-shield]: https://img.shields.io/github/license/custom-cards/boilerplate-card.svg?style=for-the-badge
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/custom-cards/boilerplate-card.svg?style=for-the-badge
-[releases]: https://github.com/custom-cards/boilerplate-card/releases
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+This repository is based on:
+
+- The [custom_cards/boilerplate_card](https://github.com/custom-cards/boilerplate-card) integration.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/rettelx/ha-airparif-card.svg?style=for-the-badge
+[contributors-url]: https://github.com/rettelx/ha-airparif-card/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/rettelx/ha-airparif-card.svg?style=for-the-badge
+[forks-url]: https://github.com/rettelx/ha-airparif-card/network/members
+[stars-shield]: https://img.shields.io/github/stars/rettelx/ha-airparif-card.svg?style=for-the-badge
+[stars-url]: https://github.com/rettelx/ha-airparif-card/stargazers
+[issues-shield]: https://img.shields.io/github/issues/rettelx/ha-airparif-card.svg?style=for-the-badge
+[issues-url]: https://github.com/rettelx/ha-airparif/-cardissues
+[license-shield]: https://img.shields.io/github/license/rettelx/ha-airparif-card.svg?style=for-the-badge
+[license-url]: https://github.com/rettelx/ha-airparif-card/blob/master/LICENSE.txt

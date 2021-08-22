@@ -1,0 +1,27 @@
+{
+  "common": {
+    "version": "Version",
+    "description": "La carte Airparif présente les données relatives à la pollution basée sur l'intégration ha-airparif.",
+    "invalid_configuration": "Configuration invalide",
+    "show_warning": "Données manquantes ou incorrectes",
+    "show_error": "Erreur",
+    "header": "Qualité de l'air"
+  },
+  "air_quality": {
+    "ozone": "O₃",
+    "nitrogen_dioxide": "NO₂",
+    "pm_10": "PM₁₀",
+    "pm_2_5": "PM₂.₅",
+    "sulfur_dioxide": "SO₂"
+  },
+  "presentation": {
+    "today": "Aujourd'hui",
+    "tomorrow": "Demain",
+    "Bon": "Bonne",
+    "Moyen": "Moyenne",
+    "Dégradé": "Dégradée",
+    "Mauvais": "Mauvaise",
+    "Très Mauvais": "Très Mauvaise",
+    "Extrêmement Mauvais": "Extrêmement Mauvaise"
+  }
+}
