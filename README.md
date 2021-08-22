@@ -92,7 +92,7 @@ entity: sensor.airparif_75101
 
 ## Roadmap
 
-See the [open issues](https://github.com/rettelx/ha-airparif/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/rettelx/ha-airparif-card/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -119,7 +119,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 This repository is based on:
 
-- The [custom_cards/boilerplate_card](https://github.com/custom-cards/boilerplate-card) integration.
+- The [custom_cards/boilerplate_card](https://github.com/custom-cards/boilerplate-card) project.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
