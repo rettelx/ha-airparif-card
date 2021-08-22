@@ -54,7 +54,7 @@
 This project provides a card that displays data from the [rettelx/ha-airparif](https://github.com/rettelx/ha-airparif)
 project.
 
-![Card example](https://github.com/rettelx/ha-airparif-card/blob/main/images/image.jpg?raw=true)
+![Card example](https://raw.githubusercontent.com/rettelx/ha-airparif-card/master/images/example.png)
 
 <!-- GETTING STARTED -->
 
